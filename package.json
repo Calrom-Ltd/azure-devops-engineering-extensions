@@ -1,9 +1,9 @@
 {
-  "name": "azure-devops-engineering-tasks",
+  "name": "calrom-azure-devops-engineering-tasks",
   "version": "1.0.0",
-  "description": "",
+  "description": "Calrom fork of Microsoft engineering tasks",
   "scripts": {
-    "test": "ts-jest",
+    "test": "jest",
     "prebuild": "npm install --no-optional",
     "build": "npm run prebuild && npm run build:emailreport && npm run build:prinsights",
     "build:t1": "npm run prebuild && npm run build:emailreport",
@@ -25,9 +25,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/azure-devops-engineering-extensions.git"
+    "url": "https://github.com/calrom-jtejero/azure-devops-engineering-extensions"
   },
-  "author": "",
+  "author": "Calrom Ltd.",
   "license": "ISC",
   "dependencies": {
     "@types/sinon": "^7.0.12",

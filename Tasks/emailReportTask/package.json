@@ -1,8 +1,8 @@
 {
-  "name": "azure-devops-emailreporttask",
-  "version": "1.0.0-preview.2",
+  "name": "calrom-azure-devops-emailreporttask",
+  "version": "1.0.0-preview.1",
   "description": "For Private Use ONLY by Author. Not Supported in any way.",
-  "author": "",
+  "author": "Calrom Ltd.",
   "license": "ISC",
   "main": "../../dist/emailReportExtension/emailReportTask/index.js",
   "types": "../../dist/emailReportExtension/emailReportTask/index.d.ts",
