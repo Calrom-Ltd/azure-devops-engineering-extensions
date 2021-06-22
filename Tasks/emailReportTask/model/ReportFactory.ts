@@ -10,7 +10,7 @@ import { BuildReport } from "./BuildReport";
 export class ReportFactory {
 
   static createNewReport(pipelineConfig: PipelineConfiguration) {
-    return (pipelineConfig.$pipelineType == PipelineType.Build) ? new BuildReport() : new ReleaseReport();
+    return (pipelineConfig && pipelineConfig.$pipelineType != PipelineType.Build) ? new ReleaseReport() : new BuildReport();
   }
 
   static mergeReports(reports: Report[]): Report {

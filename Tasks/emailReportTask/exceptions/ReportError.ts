@@ -14,7 +14,7 @@ export abstract class ReportError extends Error {
 
   public static HandleError(err: Error, rethrow: boolean = false): void {
     if(err instanceof ReportError) {
-      console.error((err as ReportError).getMessage());
+      console.error(err.getMessage());
     } else {
       console.error(err);
     }

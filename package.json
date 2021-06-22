@@ -1,9 +1,9 @@
 {
-  "name": "azure-devops-engineering-tasks",
-  "version": "1.0.0",
-  "description": "",
+  "name": "calrom-azure-devops-engineering-tasks",
+  "version": "1.0.7",
+  "description": "Calrom fork of Microsoft engineering tasks",
   "scripts": {
-    "test": "ts-jest",
+    "test": "jest",
     "prebuild": "npm install --no-optional",
     "build": "npm run prebuild && npm run build:emailreport && npm run build:prinsights",
     "build:t1": "npm run prebuild && npm run build:emailreport",
@@ -13,7 +13,7 @@
     "e2e:t1": "npm run e2e:emailreport",
     "e2e:t2": "npm run e2e:prinsights",
     "build:prinsights": "tsc -p Tasks/pullRequestInsightsTask/tsconfig.json",
-    "build:emailreport": "tsc -p Tasks/emailReportTask/tsconfig.json && node ./commands/postbuild.js emailReport",
+    "build:emailreport": "tsc -p Tasks/emailReportTask/tsconfig.json && node ./commands/postbuild.js emailReport prod",
     "pack:emailreport": "node ./commands/package.js emailreport",
     "pack:prinsights": "node ./commands/package.js pullRequestInsights",
     "e2e:emailreport": "node js/emailReportExtension/emailReportTask/tests/__e_to_e_tests__/InvokeTest.js",
@@ -25,36 +25,37 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/azure-devops-engineering-extensions.git"
+    "url": "https://github.com/calrom-jtejero/azure-devops-engineering-extensions"
   },
-  "author": "",
+  "author": "Calrom Ltd.",
   "license": "ISC",
   "dependencies": {
-    "@types/sinon": "^7.0.12",
-    "@types/stats-lite": "^2.2.0",
-    "@types/string-template": "^1.0.2",
     "azure-devops-node-api": "^10.0.0",
     "azure-pipelines-task-lib": "^2.8.0",
-    "nodemailer": "^6.3.0",
+    "nodemailer": "^6.6.2",
     "object-to-xml": "^2.0.0",
     "performance-now": "^2.1.0",
     "reflect-metadata": "^0.1.13",
     "stats-lite": "^2.0.0",
-    "ts-mockito": "^2.3.1",
     "xslt-processor": "^0.11.5"
   },
   "devDependencies": {
+    "@types/sinon": "^7.0.12",
+    "@types/stats-lite": "^2.2.0",
+    "@types/string-template": "^1.0.2",
     "@types/jest": "^24.0.15",
     "@types/node": "^12.0.4",
     "@types/q": "^1.5.2",
-    "jest": "^24.8.0",
+    "jest": "^27.0.4",
     "rimraf": "^2.6.3",
     "sinon": "^7.3.2",
     "source-map-loader": "^0.2.3",
     "tfx-cli": "^0.7.8",
-    "ts-jest": "^24.0.2",
+    "ts-jest": "^27.0.3",
     "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3"
+    "ts-mockito": "^2.3.1",
+    "tslint": "^6.1.3",
+    "typescript": "^3.9.7"
   },
   "optionalDependencies": {
     "fsevents": "*"

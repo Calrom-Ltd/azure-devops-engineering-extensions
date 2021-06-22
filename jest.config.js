@@ -10,4 +10,8 @@ module.exports = {
   bail: true,
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts'],
   roots: ['Tasks'],
+  modulePaths: [
+    "src",
+    "test"
+  ]
 };

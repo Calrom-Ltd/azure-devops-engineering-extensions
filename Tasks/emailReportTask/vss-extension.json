@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
-  "id": "EmailReportExtension",
-  "name": "Email Report Extension",
-  "version": "1.1.9",
-  "publisher": "epsteam",
+  "id": "CalromEmailReportExtension",
+  "name": "Email Report Extension for Calrom",
+  "version": "1.0.7",
+  "publisher": "calrom-jtejero",
   "public": true,
   "targets": [
     {
@@ -38,11 +38,11 @@
   },
   "repository": {
     "type": "git",
-    "uri": "https://github.com/microsoft/azure-devops-engineering-extensions"
+    "uri": "https://github.com/calrom-jtejero/azure-devops-engineering-extensions"
   },
   "contributions": [
     {
-      "id": "EmailReport",
+      "id": "CalromEmailReport",
       "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"
