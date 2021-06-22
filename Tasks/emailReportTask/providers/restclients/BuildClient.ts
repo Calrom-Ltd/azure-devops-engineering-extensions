@@ -4,6 +4,7 @@ import { Build, BuildResult, BuildQueryOrder, Timeline } from "azure-devops-node
 import { ChangeModel } from "../../model/ChangeModel";
 import { AbstractClient } from "./AbstractClient";
 import { IBuildApi } from "azure-devops-node-api/BuildApi";
+import { IdentityRef } from "azure-devops-node-api/interfaces/common/VSSInterfaces";
 
 export class BuildRestClient extends AbstractClient implements IPipelineRestClient {
 
@@ -15,7 +16,7 @@ export class BuildRestClient extends AbstractClient implements IPipelineRestClie
   }
 
   public async getPipelineAsync(): Promise<Build> {
-    return await (await this.buildApi).getBuild(this.pipelineConfig.$projectId, this.pipelineConfig.$pipelineId);
+    return (await this.buildApi).getBuild(this.pipelineConfig.$projectId, this.pipelineConfig.$pipelineId);
   }
 
   public async getLastPipelineAsync(pipelineDefId: number, envDefId: number, sourceBranchFilter: string, maxCreatedDate?: Date): Promise<Build> {
@@ -51,10 +52,10 @@ export class BuildRestClient extends AbstractClient implements IPipelineRestClie
       console.log(`No changes found for pipelineId - ${this.pipelineConfig.$pipelineId}`);
       return [];
     }
-    return changes.map(item => new ChangeModel(item.id, item.author, item.location, item.timestamp, item.message));
+    return changes.map((item: { id: string; author: IdentityRef; location: string; timestamp: Date; message: string; }) => new ChangeModel(item.id, item.author, item.location, item.timestamp, item.message));
   }
 
   public async getPipelineTimelineAsync(pipelineId: number): Promise<Timeline> {
-    return await (await this.buildApi).getBuildTimeline(this.pipelineConfig.$projectId, pipelineId);
+    return (await this.buildApi).getBuildTimeline(this.pipelineConfig.$projectId, pipelineId);
   }
 }

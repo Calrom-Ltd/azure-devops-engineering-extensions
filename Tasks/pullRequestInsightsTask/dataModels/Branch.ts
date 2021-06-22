@@ -101,13 +101,11 @@ export class Branch {
   public getPipelineFailStreak(): number {
     let count: number = 0;
     for (
-      let numberPipeline: number = 0;
-      numberPipeline < this.pipelines.length;
-      numberPipeline++
+      let pipeline of this.pipelines
     ) {
-      if (this.pipelines[numberPipeline].isFailure()) {
+      if (pipeline.isFailure()) {
         count++;
-      } else if (this.pipelines[numberPipeline].isComplete()) {
+      } else if (pipeline.isComplete()) {
         break;
       }
     }

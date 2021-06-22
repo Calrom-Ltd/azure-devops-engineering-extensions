@@ -110,9 +110,9 @@ describe("Branch Tests", () => {
       failedBuildThree,
       successfulBuildTwo
     ]);
-    expect(branch.getMostRecentCompletePipeline()).toEqual(failedBuildOne);
-    expect(branch.getMostRecentCompletePipeline()).not.toEqual(
-      failedBuildThree
+    expect(branch.getMostRecentCompletePipeline().getId()).toEqual(failedBuildOne.getId());
+    expect(branch.getMostRecentCompletePipeline().getId()).not.toEqual(
+      failedBuildThree.getId()
     );
   });
 

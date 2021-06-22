@@ -1,7 +1,7 @@
 {
-  "id": "59a02370-5b4b-4236-95bd-673180e2cbf2",
-  "name": "EmailReportPPE",
-  "friendlyName": "Email Report PPE (Testing Purposes)",
+  "id": "59a02370-5b4b-4236-95bd-673180e2c666",
+  "name": "CalromEmailReportPPE",
+  "friendlyName": "Calrom Email Report PPE (Testing Purposes)",
   "description": "Send rich email report for test results and for tasks in this stage",
   "helpMarkDown": "Sets 'EmailReportTask.EmailSent' variable to true if it sent email successfully. https://marketplace.visualstudio.com/items?itemName=epsteam.EmailReportExtension",
   "category": "Utility",
@@ -9,11 +9,11 @@
     "Build",
     "Release"
   ],
-  "author": "Microsoft Corporation",
+  "author": "Calrom Ltd.",
   "version": {
     "Major": 1,
-    "Minor": 2,
-    "Patch": 208
+    "Minor": 0,
+    "Patch": 7
   },
   "groups": [
     {

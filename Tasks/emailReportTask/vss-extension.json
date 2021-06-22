@@ -2,9 +2,9 @@
   "manifestVersion": 1,
   "id": "CalromEmailReportExtension",
   "name": "Email Report Extension for Calrom",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "publisher": "calrom-jtejero",
-  "public": false,
+  "public": true,
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
@@ -42,7 +42,7 @@
   },
   "contributions": [
     {
-      "id": "EmailReport",
+      "id": "CalromEmailReport",
       "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"

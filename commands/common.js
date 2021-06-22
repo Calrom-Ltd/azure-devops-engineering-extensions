@@ -7,8 +7,9 @@ var extName = process.argv[2];
 var taskReleaseType = "dev"; // default
 if(process.argv.length > 3) {
   // prod or dev
-  var taskReleaseType = process.argv[3];
+  taskReleaseType = process.argv[3];
 }
+
 exports.ReleaseType = taskReleaseType;
 console.log(`ExtensionName: '${extName}', ReleaseType: '${taskReleaseType}'`);
 
