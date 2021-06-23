@@ -1,6 +1,6 @@
 {
   "name": "calrom-azure-devops-engineering-tasks",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Calrom fork of Microsoft engineering tasks",
   "scripts": {
     "test": "jest",

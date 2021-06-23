@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "CalromEmailReportExtension",
   "name": "Email Report Extension for Calrom",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "publisher": "calrom-jtejero",
   "public": true,
   "targets": [
