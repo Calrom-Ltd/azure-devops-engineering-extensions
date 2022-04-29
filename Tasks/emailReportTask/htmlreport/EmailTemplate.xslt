@@ -989,7 +989,7 @@
                 <xsl:attribute name="href">
                   <xsl:value-of select="Url" />
                 </xsl:attribute>
-                <xsl:value-of select="TestCaseTitle" />
+                <xsl:value-of select="replace(TestCaseTitle,'\&#34;','')" />
               </a>
               <xsl:if test="TestOutcome = 'Failed' and FailingSinceTime = ''">
                 <sup
@@ -1060,7 +1060,7 @@
               </tr>
             </xsl:when>
           </xsl:choose>
-          <xsl:choose>
+          <!-- <xsl:choose>
             <xsl:when test="StackTrace != ''">
               <tr>
                 <td class="test-result-icon" style="width:25px;padding:0px;"></td>
@@ -1072,7 +1072,7 @@
                 </td>
               </tr>
             </xsl:when>
-          </xsl:choose>
+          </xsl:choose> -->
           <xsl:choose>
             <xsl:when test="AssociatedBugs/WorkItemViewModel">
               <tr>

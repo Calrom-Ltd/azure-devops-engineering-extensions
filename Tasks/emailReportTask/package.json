@@ -1,6 +1,6 @@
 {
   "name": "calrom-azure-devops-emailreporttask",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Calrom fork of Microsoft engineering tasks",
   "author": "Julio C. Tejero - Calrom Ltd.",
   "license": "ISC",
